@@ -50,5 +50,8 @@ public class DetectController {
         } catch (JSchException | IOException e) {
             e.printStackTrace();
         }
+
+        System.out.println();
+        System.out.println(table + " " + type + " " + left + " " + right);
     }
 }

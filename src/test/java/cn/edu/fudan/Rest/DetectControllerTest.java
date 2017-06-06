@@ -14,6 +14,6 @@ public class DetectControllerTest {
     @Test
     public void detect() {
         DetectController detectController = new DetectController();
-        detectController.detect("","","","");
+        detectController.detect("测试表名","规则类型","左侧属性","右侧属性");
     }
 }
