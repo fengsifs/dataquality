@@ -1,4 +1,4 @@
-package cn.edu.fudan.Rest;
+package cn.edu.fudan.rest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

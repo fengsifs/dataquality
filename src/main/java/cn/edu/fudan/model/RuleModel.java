@@ -1,4 +1,4 @@
-package cn.edu.fudan;
+package cn.edu.fudan.model;
 
 /**
  * Created by FengSi on 2017/06/06 at 14:46.
