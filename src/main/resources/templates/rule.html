@@ -3,11 +3,34 @@
 <head>
     <title>rules</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
-
+<p>数据质量检测</p>
 <form>
-    <input type="checkbox" name="table" th:each="table : ${tables}" th:text="${table}">
+    选择表：
+    <input type="radio" name="tables" th:each="table : ${tables}" th:text="${table}" th:value="${table}">
 </form>
+<form>
+    规则类型：
+    <input type="radio" name="ruleType" value="FD">FD</form>
+</form>
+<form>
+    左侧属性：<input type="text" name="left"><br>
+    右侧属性：<input type="text" name="right">
+</form>
+<button>检测</button>
 </body>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            window.open('/detect?' +
+                'table=' + $("input[name='tables']:checked").val() +
+                '&type=' + $("input[name='ruleType']:checked").val() +
+                '&left=' + $("input[name='left']").val() +
+                '&right=' + $("input[name='right']").val()
+            );
+        });
+    });
+</script>
 </html>
