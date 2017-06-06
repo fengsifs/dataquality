@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>rules</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<form>
+    <input type="checkbox" name="table" th:each="table : ${tables}" th:text="${table}">
+</form>
+</body>
+</html>
